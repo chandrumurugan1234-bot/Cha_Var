@@ -1,164 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Varshini ❤️ Chandru</title>
+<script>
+let password = prompt("Enter our secret code 💜");
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
+if(password === "2316"){
+document.body.style.display = "block";
+}else{
+document.body.style.display = "block";
+document.body.innerHTML = `
+<div style="
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#9333ea);
 color:white;
+font-family:'Poppins',sans-serif;
 text-align:center;
-overflow-x:hidden;
-display:none; /* 🔒 HIDDEN BY DEFAULT */
-}
+padding:20px;
+">
 
-.container{padding:40px 20px;}
+<h1 style="font-family:'Dancing Script',cursive;font-size:40px;">
+Oops 😜
+</h1>
 
-.glow{
-font-family:'Dancing Script',cursive;
-font-size:40px;
-animation:glow 2s infinite alternate;
-}
+<p style="font-size:18px;max-width:300px;">
+Don't worry darling 💜<br><br>
+Try again slowly… you know our special number 😉<br><br>
+I’m waiting for you 🌙
+</p>
 
-@keyframes glow{
-from{text-shadow:0 0 10px #fff;}
-to{text-shadow:0 0 30px #fff,0 0 50px #f0abfc;}
-}
-
-button{
+<button onclick="location.reload()" style="
+margin-top:20px;
 padding:12px 25px;
 border:none;
 border-radius:30px;
 background:white;
 color:#9333ea;
 font-size:16px;
-margin-top:20px;
-cursor:pointer;
-transition:0.3s;
-}
-button:hover{transform:scale(1.1);}
+cursor:pointer;">
+Try Again 💜
+</button>
 
-.hidden{display:none;}
-
-.gallery img{
-width:90%;
-max-width:280px;
-border-radius:20px;
-margin:10px;
-box-shadow:0 0 20px rgba(255,255,255,0.6);
-}
-</style>
-</head>
-
-<body>
-
-<script>
-// 🔐 STRONG PASSWORD LOCK
-let password = prompt("Enter our secret code 💜");
-
-if(password === "2316"){
-document.body.style.display = "block"; // SHOW PAGE ONLY IF CORRECT
-}else{
-alert("Sorry darling 💜");
-document.body.innerHTML = ""; // REMOVE EVERYTHING
-throw new Error("Access Denied"); // STOP EXECUTION
+</div>
+`;
+throw new Error("Access Denied");
 }
 </script>
-
-<div class="container">
-
-<h1 class="glow">Varshini ❤️ Chandru</h1>
-<p>You are my peace, my happiness, my forever Varshini 💜</p>
-
-<button onclick="showLove()">Open Our Love Story 💌</button>
-
-<div id="loveSection" class="hidden">
-
-<h3>Our Beautiful Memories 📸</h3>
-<div class="gallery">
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-</div>
-
-<h2>Will You Stay With Me Forever? 💍</h2>
-<button onclick="yesLove()">Yes 💜</button>
-<button id="noBtn" onmouseover="moveNo()">No 😜</button>
-
-<div id="finalMessage" class="hidden">
-<h1 class="glow">She Said YES 💜💍</h1>
-</div>
-
-<div id="secretMessage" class="hidden" style="opacity:0;transition:2s;">
-<p>
-Hi Darling💜, Just Small suprise to make you happy on this day😁,<br><br>
-I Hope this suprise makes you happy🙃. Thank you darling being there for me in all situations🙌,<br><br>
-Our Happy time is when we meet and talking more and teasing one on one🤗🫣,<br><br>
-Our worst time is fighting and hurting one on one😂 I'm trying to stop these worst things also you too please support with me🫡<br><br>
-Other than that don't worry for anything darling I'm always here to hold your hands forever🤝<br><br>
-We are stepping into 5th year 💜<br><br>
-Happy Valentine's Day darling 💜<br><br>
-I love you di 😘😘😘😘😘
-</p>
-</div>
-
-</div>
-</div>
-
-<script>
-
-function showLove(){
-document.getElementById("loveSection").classList.remove("hidden");
-}
-
-function yesLove(){
-
-document.getElementById("finalMessage").classList.remove("hidden");
-
-let secret = document.getElementById("secretMessage");
-secret.classList.remove("hidden");
-
-setTimeout(()=>{
-secret.style.opacity="1";
-},300);
-
-// floating emojis
-for(let i=0;i<40;i++){
-let fire=document.createElement("div");
-fire.innerHTML="💜💍";
-fire.style.position="fixed";
-fire.style.left=Math.random()*window.innerWidth+"px";
-fire.style.top=Math.random()*window.innerHeight+"px";
-fire.style.fontSize="25px";
-document.body.appendChild(fire);
-setTimeout(()=>fire.remove(),2000);
-}
-
-// Spotify button
-setTimeout(()=>{
-let btn=document.createElement("button");
-btn.innerHTML="💖 Play Our Special Song 🎵";
-btn.style.marginTop="30px";
-btn.onclick=function(){
-window.location.href =
-"intent://open.spotify.com/track/28pMkd9JEFnupyk4SnCTPn#Intent;scheme=https;package=com.spotify.music;end";
-};
-secret.appendChild(btn);
-},1200);
-}
-
-function moveNo(){
-var btn=document.getElementById("noBtn");
-btn.style.position="absolute";
-btn.style.top=Math.random()*300+"px";
-btn.style.left=Math.random()*300+"px";
-}
-</script>
-
-</body>
-</html>
