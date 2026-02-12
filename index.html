@@ -2,42 +2,49 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Varshini 💜</title>
+<title>Varshini ❤️ Chandru</title>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background: radial-gradient(circle at top,#e9d5ff,#c084fc,#9333ea);
+background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#9333ea);
 color:white;
 text-align:center;
 overflow-x:hidden;
 }
+
 .moon{
 position:fixed;
-top:60px;
-right:40px;
-width:120px;
-height:120px;
-background:radial-gradient(circle,#fff,#e9d5ff,#c084fc);
+top:50px;
+right:30px;
+width:100px;
+height:100px;
+background:radial-gradient(circle,#fff,#f3e8ff,#d8b4fe);
 border-radius:50%;
-box-shadow:0 0 60px 20px rgba(255,255,255,0.6);
+box-shadow:0 0 60px rgba(255,255,255,0.8);
 animation:pulse 4s infinite alternate;
 }
+
 @keyframes pulse{
 from{transform:scale(1);}
 to{transform:scale(1.1);}
 }
+
 .container{padding:40px 20px;}
+
 .glow{
 font-family:'Dancing Script',cursive;
-font-size:42px;
-animation:glow 2s ease-in-out infinite alternate;
+font-size:40px;
+animation:glow 2s infinite alternate;
 }
+
 @keyframes glow{
 from{text-shadow:0 0 10px #fff;}
 to{text-shadow:0 0 30px #fff,0 0 50px #f0abfc;}
 }
+
 button{
 padding:12px 25px;
 border:none;
@@ -50,7 +57,9 @@ cursor:pointer;
 transition:0.3s;
 }
 button:hover{transform:scale(1.1);}
+
 .hidden{display:none;}
+
 .gallery img{
 width:90%;
 max-width:280px;
@@ -58,11 +67,7 @@ border-radius:20px;
 margin:10px;
 box-shadow:0 0 20px rgba(255,255,255,0.6);
 }
-#typing{
-margin-top:20px;
-font-size:18px;
-min-height:100px;
-}
+
 .heart{
 position:fixed;
 width:15px;
@@ -82,12 +87,14 @@ border-radius:50%;
 }
 .heart:before{top:-7px;left:0;}
 .heart:after{left:-7px;top:0;}
+
 @keyframes float{
 0%{transform:translateY(0) rotate(45deg);opacity:1;}
 100%{transform:translateY(-800px) rotate(45deg);opacity:0;}
 }
 </style>
 </head>
+
 <body>
 
 <script>
@@ -102,45 +109,44 @@ document.body.innerHTML="";
 
 <div class="container">
 
-<h1 class="glow">Varshini 💜</h1>
+<h1 class="glow">Varshini ❤️ Chandru</h1>
 
-<div id="typing"></div>
+<p id="typing"></p>
 
-<button onclick="showLove()">Open My Heart 💌</button>
+<button onclick="showLove()">Open Our Love Story 💌</button>
 
 <div id="loveSection" class="hidden">
 
-<h2>Love Letter from Chandru 💜</h2>
+<h2>என் வர்ஷினி 💜</h2>
 
 <p>
-Hi Darling💜, Just Small suprise to make you happy on this day😁,<br><br>
-I Hope this suprise makes you happy🙃. Thank you darling being there for me in all situations🙌,<br><br>
-Our Happy time is when we meet and talking more and teasing one on one🤗🫣,<br><br>
-our worst time is fighting and hurting one on one😂 I'm trying to stop these worst things also you too please support with me🫡<br><br>
-other than that don't worry for anything darling I'm always here to hold your hands forever🤝<br><br>
-we are stepping into 5th year happy valentine's day darling💜<br><br>
-I love you di😘😘😘😘😘
+Hi Darling💜 This small surprise is only for you 😁<br><br>
+நீ இல்லாத வாழ்க்கை எனக்கு நினைக்க முடியாது 🌙<br><br>
+We are stepping into our 5th year together 💖<br>
+No matter fights, no matter tears — I will always hold your hand 🤝<br><br>
+I love you di 😘😘😘😘😘
 </p>
 
-<h3>1 Reason I Love You 💖</h3>
-<p>Because you stand with me in every situation. That is my biggest strength 💜</p>
+<h3>Our Beautiful Memories 📸</h3>
+<div class="gallery">
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
 
-<h2>Will You Be Mine Forever? 💍</h2>
+<h2>Will You Stay With Me Forever? 💍</h2>
 <button onclick="yesLove()">Yes 💜</button>
 <button id="noBtn" onmouseover="moveNo()">No 😜</button>
 
 <div id="finalMessage" class="hidden">
-<h1 class="glow">Happy Valentine's Day My Forever 💜</h1>
+<h1 class="glow">She Said YES 💜💍</h1>
 </div>
 
-<div id="secretMessage" class="hidden" style="margin-top:20px;opacity:0;transition:2s;">
-<h3>Only For You Varshini 💜</h3>
+<div id="secretMessage" class="hidden" style="opacity:0;transition:2s;">
 <p>
-No matter how many fights we have,<br>
-no matter how many misunderstandings come,<br>
-I will never leave your hand 🤝<br><br>
-You are my future, my wife, my forever dream 🌙<br><br>
-Chandru belongs only to you. Always. 💜
+You are my future wife ❤️<br>
+My forever moon 🌙<br>
+Chandru belongs only to Varshini 💜
 </p>
 </div>
 
@@ -172,16 +178,21 @@ document.getElementById("secretMessage").classList.remove("hidden");
 setTimeout(()=>{
 document.getElementById("secretMessage").style.opacity="1";
 },300);
-for(let i=0;i<50;i++){
+
+for(let i=0;i<40;i++){
 let fire=document.createElement("div");
-fire.innerHTML="💜";
+fire.innerHTML="💜💍";
 fire.style.position="fixed";
 fire.style.left=Math.random()*window.innerWidth+"px";
 fire.style.top=Math.random()*window.innerHeight+"px";
-fire.style.fontSize="30px";
+fire.style.fontSize="25px";
 document.body.appendChild(fire);
 setTimeout(()=>fire.remove(),2000);
 }
+
+setTimeout(()=>{
+window.open("https://wa.me/?text=She%20said%20YES%20💜","_blank");
+},2000);
 }
 
 function moveNo(){
