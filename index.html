@@ -3,13 +3,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Varshini ❤️ Chandru</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#9333ea);
+background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#7e22ce,#4c1d95);
 color:white;
 text-align:center;
 overflow-x:hidden;
@@ -19,30 +20,30 @@ overflow-x:hidden;
 position:fixed;
 top:50px;
 right:30px;
-width:100px;
-height:100px;
+width:120px;
+height:120px;
 background:radial-gradient(circle,#fff,#f3e8ff,#d8b4fe);
 border-radius:50%;
-box-shadow:0 0 60px rgba(255,255,255,0.8);
-animation:pulse 4s infinite alternate;
+box-shadow:0 0 80px rgba(255,255,255,0.9);
+animation:pulse 5s infinite alternate;
 }
 
 @keyframes pulse{
 from{transform:scale(1);}
-to{transform:scale(1.1);}
+to{transform:scale(1.15);}
 }
 
 .container{padding:40px 20px;}
 
 .glow{
 font-family:'Dancing Script',cursive;
-font-size:40px;
+font-size:42px;
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
 from{text-shadow:0 0 10px #fff;}
-to{text-shadow:0 0 30px #fff,0 0 50px #f0abfc;}
+to{text-shadow:0 0 40px #fff,0 0 70px #f0abfc;}
 }
 
 button{
@@ -50,7 +51,7 @@ padding:12px 25px;
 border:none;
 border-radius:30px;
 background:white;
-color:#9333ea;
+color:#7e22ce;
 font-size:16px;
 margin-top:20px;
 cursor:pointer;
@@ -65,33 +66,21 @@ width:90%;
 max-width:280px;
 border-radius:20px;
 margin:10px;
-box-shadow:0 0 20px rgba(255,255,255,0.6);
+box-shadow:0 0 30px rgba(255,255,255,0.7);
+transition:0.5s;
+}
+.gallery img:hover{
+transform:scale(1.05);
 }
 
-.heart{
-position:fixed;
-width:15px;
-height:15px;
-background:white;
-transform:rotate(45deg);
-animation:float 6s linear infinite;
+.fadeIn{
+opacity:0;
+transition:2s;
 }
-.heart:before,
-.heart:after{
-content:'';
-position:absolute;
-width:15px;
-height:15px;
-background:white;
-border-radius:50%;
+.show{
+opacity:1;
 }
-.heart:before{top:-7px;left:0;}
-.heart:after{left:-7px;top:0;}
 
-@keyframes float{
-0%{transform:translateY(0) rotate(45deg);opacity:1;}
-100%{transform:translateY(-800px) rotate(45deg);opacity:0;}
-}
 </style>
 </head>
 
@@ -120,14 +109,15 @@ document.body.innerHTML="";
 <h2>என் வர்ஷினி 💜</h2>
 
 <p>
-Hi Darling💜 This small surprise is only for you 😁<br><br>
+Hi Darling 💜 This surprise is only for you 😁<br><br>
 நீ இல்லாத வாழ்க்கை எனக்கு நினைக்க முடியாது 🌙<br><br>
 We are stepping into our 5th year together 💖<br>
 No matter fights, no matter tears — I will always hold your hand 🤝<br><br>
-I love you di 😘😘😘😘😘
+I love you di 😘😘😘
 </p>
 
 <h3>Our Beautiful Memories 📸</h3>
+
 <div class="gallery">
 <img src="photo1.jpg">
 <img src="photo2.jpg">
@@ -135,6 +125,7 @@ I love you di 😘😘😘😘😘
 </div>
 
 <h2>Will You Stay With Me Forever? 💍</h2>
+
 <button onclick="yesLove()">Yes 💜</button>
 <button id="noBtn" onmouseover="moveNo()">No 😜</button>
 
@@ -142,7 +133,8 @@ I love you di 😘😘😘😘😘
 <h1 class="glow">She Said YES 💜💍</h1>
 </div>
 
-<div id="secretMessage" class="hidden" style="opacity:0;transition:2s;">
+<div id="secretMessage" class="hidden fadeIn">
+<h2>Private Message 🔒</h2>
 <p>
 You are my future wife ❤️<br>
 My forever moon 🌙<br>
@@ -158,6 +150,7 @@ Chandru belongs only to Varshini 💜
 </audio>
 
 <script>
+
 var text="You are my peace, my happiness, my forever Varshini 💜";
 var i=0;
 function typeWriter(){
@@ -174,25 +167,13 @@ document.getElementById("loveSection").classList.remove("hidden");
 
 function yesLove(){
 document.getElementById("finalMessage").classList.remove("hidden");
-document.getElementById("secretMessage").classList.remove("hidden");
-setTimeout(()=>{
-document.getElementById("secretMessage").style.opacity="1";
-},300);
 
-for(let i=0;i<40;i++){
-let fire=document.createElement("div");
-fire.innerHTML="💜💍";
-fire.style.position="fixed";
-fire.style.left=Math.random()*window.innerWidth+"px";
-fire.style.top=Math.random()*window.innerHeight+"px";
-fire.style.fontSize="25px";
-document.body.appendChild(fire);
-setTimeout(()=>fire.remove(),2000);
-}
+let secret=document.getElementById("secretMessage");
+secret.classList.remove("hidden");
 
 setTimeout(()=>{
-window.open("https://wa.me/?text=She%20said%20YES%20💜","_blank");
-},2000);
+secret.classList.add("show");
+},200);
 }
 
 function moveNo(){
@@ -202,14 +183,6 @@ btn.style.top=Math.random()*300+"px";
 btn.style.left=Math.random()*300+"px";
 }
 
-setInterval(()=>{
-const heart=document.createElement("div");
-heart.classList.add("heart");
-heart.style.left=Math.random()*window.innerWidth+"px";
-heart.style.bottom="-20px";
-document.body.appendChild(heart);
-setTimeout(()=>heart.remove(),6000);
-},500);
 </script>
 
 </body>
