@@ -10,7 +10,7 @@
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#7e22ce,#4c1d95);
+background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#9333ea);
 color:white;
 text-align:center;
 overflow-x:hidden;
@@ -20,30 +20,30 @@ overflow-x:hidden;
 position:fixed;
 top:50px;
 right:30px;
-width:120px;
-height:120px;
+width:100px;
+height:100px;
 background:radial-gradient(circle,#fff,#f3e8ff,#d8b4fe);
 border-radius:50%;
-box-shadow:0 0 80px rgba(255,255,255,0.9);
-animation:pulse 5s infinite alternate;
+box-shadow:0 0 60px rgba(255,255,255,0.8);
+animation:pulse 4s infinite alternate;
 }
 
 @keyframes pulse{
 from{transform:scale(1);}
-to{transform:scale(1.15);}
+to{transform:scale(1.1);}
 }
 
 .container{padding:40px 20px;}
 
 .glow{
 font-family:'Dancing Script',cursive;
-font-size:42px;
+font-size:40px;
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
 from{text-shadow:0 0 10px #fff;}
-to{text-shadow:0 0 40px #fff,0 0 70px #f0abfc;}
+to{text-shadow:0 0 30px #fff,0 0 50px #f0abfc;}
 }
 
 button{
@@ -51,7 +51,7 @@ padding:12px 25px;
 border:none;
 border-radius:30px;
 background:white;
-color:#7e22ce;
+color:#9333ea;
 font-size:16px;
 margin-top:20px;
 cursor:pointer;
@@ -66,21 +66,13 @@ width:90%;
 max-width:280px;
 border-radius:20px;
 margin:10px;
-box-shadow:0 0 30px rgba(255,255,255,0.7);
-transition:0.5s;
-}
-.gallery img:hover{
-transform:scale(1.05);
+box-shadow:0 0 20px rgba(255,255,255,0.6);
 }
 
-.fadeIn{
-opacity:0;
-transition:2s;
+@keyframes float{
+0%{transform:translateY(0) rotate(45deg);opacity:1;}
+100%{transform:translateY(-800px) rotate(45deg);opacity:0;}
 }
-.show{
-opacity:1;
-}
-
 </style>
 </head>
 
@@ -100,24 +92,13 @@ document.body.innerHTML="";
 
 <h1 class="glow">Varshini ❤️ Chandru</h1>
 
-<p id="typing"></p>
+<p>You are my peace, my happiness, my forever Varshini 💜</p>
 
 <button onclick="showLove()">Open Our Love Story 💌</button>
 
 <div id="loveSection" class="hidden">
 
-<h2>என் வர்ஷினி 💜</h2>
-
-<p>
-Hi Darling 💜 This surprise is only for you 😁<br><br>
-நீ இல்லாத வாழ்க்கை எனக்கு நினைக்க முடியாது 🌙<br><br>
-We are stepping into our 5th year together 💖<br>
-No matter fights, no matter tears — I will always hold your hand 🤝<br><br>
-I love you di 😘😘😘
-</p>
-
 <h3>Our Beautiful Memories 📸</h3>
-
 <div class="gallery">
 <img src="photo1.jpg">
 <img src="photo2.jpg">
@@ -125,7 +106,6 @@ I love you di 😘😘😘
 </div>
 
 <h2>Will You Stay With Me Forever? 💍</h2>
-
 <button onclick="yesLove()">Yes 💜</button>
 <button id="noBtn" onmouseover="moveNo()">No 😜</button>
 
@@ -133,47 +113,50 @@ I love you di 😘😘😘
 <h1 class="glow">She Said YES 💜💍</h1>
 </div>
 
-<div id="secretMessage" class="hidden fadeIn">
-<h2>Private Message 🔒</h2>
+<div id="secretMessage" class="hidden" style="opacity:0;transition:2s;">
 <p>
-You are my future wife ❤️<br>
-My forever moon 🌙<br>
-Chandru belongs only to Varshini 💜
+Hi Darling💜, Just Small suprise to make you happy on this day😁,<br><br>
+I Hope this suprise makes you happy🙃. Thank you darling being there for me in all situations🙌,<br><br>
+Our Happy time is when we meet and talking more and teasing one on one🤗🫣,<br><br>
+Our worst time is fighting and hurting one on one😂 I'm trying to stop these worst things also you too please support with me🫡<br><br>
+Other than that don't worry for anything darling I'm always here to hold your hands forever🤝<br><br>
+We are stepping into 5th year 💜<br><br>
+Happy Valentine's Day darling 💜<br><br>
+I love you di 😘😘😘😘😘
 </p>
 </div>
 
 </div>
 </div>
 
-<audio autoplay loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b3c75.mp3?filename=romantic-ambient-piano-110624.mp3" type="audio/mpeg">
-</audio>
-
 <script>
-
-var text="You are my peace, my happiness, my forever Varshini 💜";
-var i=0;
-function typeWriter(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typeWriter,50);
-}}
-typeWriter();
-
 function showLove(){
 document.getElementById("loveSection").classList.remove("hidden");
 }
 
 function yesLove(){
 document.getElementById("finalMessage").classList.remove("hidden");
-
-let secret=document.getElementById("secretMessage");
-secret.classList.remove("hidden");
-
+document.getElementById("secretMessage").classList.remove("hidden");
 setTimeout(()=>{
-secret.classList.add("show");
-},200);
+document.getElementById("secretMessage").style.opacity="1";
+},300);
+
+/* FIREWORK EMOJIS */
+for(let i=0;i<40;i++){
+let fire=document.createElement("div");
+fire.innerHTML="💜💍";
+fire.style.position="fixed";
+fire.style.left=Math.random()*window.innerWidth+"px";
+fire.style.top=Math.random()*window.innerHeight+"px";
+fire.style.fontSize="25px";
+document.body.appendChild(fire);
+setTimeout(()=>fire.remove(),2000);
+}
+
+/* OPEN SPOTIFY SONG */
+setTimeout(()=>{
+window.open("https://open.spotify.com/track/28pMkd9JEFnupyk4SnCTPn","_blank");
+},1500);
 }
 
 function moveNo(){
@@ -182,7 +165,6 @@ btn.style.position="absolute";
 btn.style.top=Math.random()*300+"px";
 btn.style.left=Math.random()*300+"px";
 }
-
 </script>
 
 </body>
