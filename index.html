@@ -1,10 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Varshini 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f3e8ff,#d8b4fe,#9333ea);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+#mainContent{
+display:none;
+padding:20px;
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:40px;
+margin-top:40px;
+}
+
+.section{
+margin:60px 0;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:white;
+color:#9333ea;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+}
+
+img{
+width:90%;
+max-width:300px;
+border-radius:20px;
+margin:10px 0;
+}
+
+#secretMessage{
+display:none;
+margin-top:20px;
+font-size:18px;
+}
+
+#proposal{
+display:none;
+margin-top:30px;
+}
+
+#hiddenLoveMessage{
+display:none;
+margin-top:20px;
+font-size:18px;
+}
+
+a{
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="mainContent">
+
+<h1>Hi Varshini 💜</h1>
+
+<div class="section">
+<p>Just Small surprise to make you happy on this day 😁💜</p>
+</div>
+
+<div class="section">
+<h2>📸 Our Memories</h2>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+</div>
+
+<div class="section">
+<h2>💌 Love Letter</h2>
+<p>
+Hi Darling💜, Just Small surprise to make you happy on this day😁,
+I Hope this surprise makes you happy🙃.
+Thank you darling being there for me in all situations🙌,
+Our Happy time is when we meet and talking more and teasing one on one🤗🫣,
+our worst time is fighting and hurting one on one😂
+I'm trying to stop these worst things also you too please support with me🫡
+other than that don't worry for anything darling I'm always here to hold your hands forever🤝
+we are stepping into 5th year happy valentine's day darling💜.
+I love you di😘😘😘😘😘
+</p>
+</div>
+
+<div class="section">
+<h2>💖 Reason I Love You</h2>
+<p>You stay with me in every situation 💕</p>
+</div>
+
+<div class="section">
+<h2>🎶 Our Song</h2>
+<a href="spotify:track:28pMkd9JEFnupyk4SnCTPn">
+<button>Play Our Song 💜</button>
+</a>
+</div>
+
+<div class="section">
+<h2>💍 Proposal</h2>
+<p>Will you stay with me forever? 💜</p>
+
+<button onclick="sayYes()">YES 💜</button>
+<button onclick="sayNo()">NO 😏</button>
+
+<div id="hiddenLoveMessage">
+<p>
+You clicked YES 😘💜<br><br>
+Forever starts now baby 💍🌙
+</p>
+</div>
+
+</div>
+
+</div>
+
 <script>
+
 let password = prompt("Enter our secret code 💜");
 
 if(password === "2316"){
-document.body.style.display = "block";
+document.getElementById("mainContent").style.display = "block";
 }else{
-document.body.style.display = "block";
+
 document.body.innerHTML = `
 <div style="
 height:100vh;
@@ -12,25 +151,25 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background: radial-gradient(circle at top,#f3e8ff,#d8b4fe,#9333ea);
+background:linear-gradient(135deg,#f3e8ff,#d8b4fe,#9333ea);
 color:white;
 font-family:'Poppins',sans-serif;
 text-align:center;
 padding:20px;
 ">
 
-<h1 style="font-family:'Dancing Script',cursive;font-size:40px;">
-Oops 😜
+<h1 style="font-family:'Dancing Script',cursive;font-size:42px;">
+Oops Darling 😜💜
 </h1>
 
-<p style="font-size:18px;max-width:300px;">
-Don't worry darling 💜<br><br>
-Try again slowly… you know our special number 😉<br><br>
-I’m waiting for you 🌙
+<p style="font-size:18px;max-width:320px;margin-top:15px;">
+Don't worry darling 💕<br><br>
+You can do it... try again slowly 😉<br><br>
+I'm waiting for you 🌙
 </p>
 
 <button onclick="location.reload()" style="
-margin-top:20px;
+margin-top:25px;
 padding:12px 25px;
 border:none;
 border-radius:30px;
@@ -43,6 +182,18 @@ Try Again 💜
 
 </div>
 `;
-throw new Error("Access Denied");
+
 }
+
+function sayYes(){
+document.getElementById("hiddenLoveMessage").style.display="block";
+}
+
+function sayNo(){
+alert("No option only YES allowed 😏💜");
+}
+
 </script>
+
+</body>
+</html>
